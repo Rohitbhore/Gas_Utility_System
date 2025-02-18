@@ -13,7 +13,7 @@ class ServiceRequest(models.Model):
     request_type = models.CharField(max_length=20, choices=REQUEST_TYPES)
     description = models.TextField()
     file_attachment = models.FileField(upload_to='attachments/', null=True, blank=True)
-    status = models.CharField(max_length=20, default='Pending')  # Pending, In Progress, Resolved
+    status = models.CharField(max_length=20, default='Pending')  
     created_at = models.DateTimeField(auto_now_add=True)
     resolved_at = models.DateTimeField(null=True, blank=True)
     
