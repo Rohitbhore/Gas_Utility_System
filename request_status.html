@@ -1,0 +1,7 @@
+<h2>Service Request Status</h2>
+<p>Request Type: {{ service_request.request_type }}</p>
+<p>Status: {{ service_request.status }}</p>
+<p>Submitted at: {{ service_request.created_at }}</p>
+{% if service_request.resolved_at %}
+    <p>Resolved at: {{ service_request.resolved_at }}</p>
+{% endif %}
